@@ -25,14 +25,18 @@ pipeline {
         stage('clone') {
             steps {
                 git 'https://github.com/asmitsaw/dockerSite.git'
-            }
+            }}
             stage('Build') {
             steps {
                 bat 'javac hello.java'
+            }
+            
             }
             stage('run') {
             steps {
                 bat 'java hello'
             }
+    }
+        
     }
 }
